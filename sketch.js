@@ -9,7 +9,7 @@ let score = 0;
 let s;
 let go;
 function setup() {
-	new Canvas(1270, 500);
+	createCanvas(1270,500)
   gameFloor1 =new Sprite(5, 245, 10, 500, 'static');
   gameFloor1.color = 'magenta';
   gameFloor2 =new Sprite(1265, 245, 10, 500, 'static');
@@ -35,8 +35,8 @@ function draw() {
 
   frameRate(60);
 
-  box1.y = mouse.y
-  box2.y = mouse.y
+  box1.y = mouseY;
+  box2.y = mouseY;
   
   if (box1.collides(ball)) {
 		ball.vel.x = 6;
